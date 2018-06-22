@@ -1,5 +1,6 @@
 <?php /* Template Name: Film */ ?>
 <?php get_header(); ?>
+<?php $films = get_field('videos'); ?>
 
 <div class="arrows">
   <a class="prev" style="background-image: url('<?php bloginfo('template_url'); ?>/images/prev_arrow.png')"></a>
@@ -8,31 +9,20 @@
 
 <div class="container film-container">
   <div class="row carousel">
+    <?php foreach($films as $film): ?>
       <div>
           <div class="col-md-7">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/r3UggJ9ZPDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="<?php echo $film['iframe']; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
           <div class="col-md-5">
-              <h2 class="film-title">"To give (2018)"</h2>   
+              <h2 class="film-title"><?php echo $film['title']; ?></h2>   
               <p class="film-description">
-              short narrative story arthanse, located in Eugene, Oregon. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              <?php echo $film['description']; ?>
               </p> 
-              <span class="film-tags">Written, directed, edited.</span>
+              <span class="film-tags"><?php echo $film['status']; ?></span>
           </div>
         </div>
-
-        <div>
-          <div class="col-md-7">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/vvFlBC7_Xjw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-5">
-              <h2 class="film-title">"The Hunt"</h2>   
-              <p class="film-description">
-              short narrative story arthanse, located in Eugene, Oregon. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </p> 
-              <span class="film-tags">Written, directed, edited.</span>
-          </div>
-        </div>
+      <?php endforeach;?>
 
     </div>
 </div>

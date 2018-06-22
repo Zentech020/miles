@@ -1,5 +1,6 @@
 <?php get_header(); ?>
+<?php $bg = get_field('background_image'); ?>
 
-<div class="home" style="background-image: url('<?php bloginfo('template_url'); ?>/images/miles.jpg')"></div>
+<div class="home" style="background-image: url('<?php echo $bg['url']['sizes']['full']; ?>')"></div>
 
 <?php get_footer(); ?>
