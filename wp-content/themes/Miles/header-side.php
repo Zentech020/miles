@@ -22,8 +22,10 @@
 
 <div class="sidenav">
   <a class="home" href="/">Miles Dixon</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
+  <a href="#services">Film</a>
+  <a href="#clients">Etc/other</a>
+  <a href="#contact">Youtube</a>
   <a href="#contact">Contact</a>
+
 </div>
 

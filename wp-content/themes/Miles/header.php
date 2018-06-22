@@ -23,19 +23,19 @@
 <body class="<?php echo $post_slug; ?>">
 <nav>
 <ul class="container">
-  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/miles.png')">
+  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/miles<?php if($post_slug == 'hello-world') echo '-active' ?>.png')">
     <a href="<?php echo get_site_url();?>"></a>
   </li>
-  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/film.png')">
+  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/film<?php if($post_slug == 'film') echo '-active' ?>.png')">
     <a href="<?php echo get_site_url();?>/film"></a>
 </li>
-  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/etc_other.png')">
+  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/etc_other<?php if($post_slug == 'etc') echo '-active' ?>.png')">
     <a href="<?php echo get_site_url();?>/etc"></a>
   </li>
   <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/youtube.png')">
   <a target="_blank" href="https://youtube.com"></a>
 </li>
-  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/contact.png')">
+  <li style="background-image: url('<?php bloginfo('template_url'); ?>/images/contact<?php if($post_slug == 'contact') echo '-active' ?>.png')">
     <a href="<?php echo get_site_url();?>/contact"></a>
   </li>
   </ul>
